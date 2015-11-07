@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 2.8)
+project( outline )
+find_package( OpenCV REQUIRED )
+add_executable( outline outline.cpp )
+target_link_libraries( outline ${OpenCV_LIBS} )
+
+cmake_minimum_required(VERSION 2.8)
+project( 3c_outline )
+find_package( OpenCV REQUIRED )
+add_executable(  3c_outline 3_channel_outline.cpp )
+target_link_libraries( 3c_outline ${OpenCV_LIBS} )
+
+cmake_minimum_required(VERSION 2.8)
+project( 3c_c_outline )
+find_package( OpenCV REQUIRED )
+add_executable(  3c_c_outline 3c_color_outline.cpp )
+target_link_libraries( 3c_c_outline ${OpenCV_LIBS} )
+
+cmake_minimum_required(VERSION 2.8)
+project( prewitt )
+find_package( OpenCV REQUIRED )
+add_executable(  prewitt edge_prewitt.cpp )
+target_link_libraries( prewitt ${OpenCV_LIBS} )
