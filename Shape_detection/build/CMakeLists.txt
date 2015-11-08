@@ -10,3 +10,9 @@ find_package( OpenCV REQUIRED )
 add_executable( ../misc_shape_detect ../misc_shape_detect.cpp )
 target_link_libraries( ../misc_shape_detect ${OpenCV_LIBS} )
 
+cmake_minimum_required(VERSION 2.8)
+project( misc_shape_detect_video )
+find_package( OpenCV REQUIRED )
+add_executable( ../misc_shape_detect_video ../misc_shape_detect_video.cpp )
+target_link_libraries( ../misc_shape_detect_video ${OpenCV_LIBS} )
+

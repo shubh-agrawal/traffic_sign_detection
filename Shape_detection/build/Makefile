@@ -124,6 +124,19 @@ depend:
 	$(MAKE) -f CMakeFiles/../misc_shape_detect.dir/build.make CMakeFiles/../misc_shape_detect.dir/build
 .PHONY : ../misc_shape_detect/fast
 
+#=============================================================================
+# Target rules for targets named ../misc_shape_detect_video
+
+# Build rule for target.
+../misc_shape_detect_video: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ../misc_shape_detect_video
+.PHONY : ../misc_shape_detect_video
+
+# fast build rule for target.
+../misc_shape_detect_video/fast:
+	$(MAKE) -f CMakeFiles/../misc_shape_detect_video.dir/build.make CMakeFiles/../misc_shape_detect_video.dir/build
+.PHONY : ../misc_shape_detect_video/fast
+
 home/shubh/opencv/traffic_sign_detection/Shape_detection/houghcircle.o: home/shubh/opencv/traffic_sign_detection/Shape_detection/houghcircle.cpp.o
 .PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/houghcircle.o
 
@@ -172,6 +185,30 @@ home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect.cpp.s
 	$(MAKE) -f CMakeFiles/../misc_shape_detect.dir/build.make CMakeFiles/../misc_shape_detect.dir/home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect.cpp.s
 .PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect.cpp.s
 
+home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.o: home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.o
+.PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.o
+
+# target to build an object file
+home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.o:
+	$(MAKE) -f CMakeFiles/../misc_shape_detect_video.dir/build.make CMakeFiles/../misc_shape_detect_video.dir/home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.o
+.PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.o
+
+home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.i: home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.i
+.PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.i
+
+# target to preprocess a source file
+home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.i:
+	$(MAKE) -f CMakeFiles/../misc_shape_detect_video.dir/build.make CMakeFiles/../misc_shape_detect_video.dir/home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.i
+.PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.i
+
+home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.s: home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.s
+.PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.s
+
+# target to generate assembly for a file
+home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.s:
+	$(MAKE) -f CMakeFiles/../misc_shape_detect_video.dir/build.make CMakeFiles/../misc_shape_detect_video.dir/home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.s
+.PHONY : home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -180,6 +217,7 @@ help:
 	@echo "... depend"
 	@echo "... ../houghcircle"
 	@echo "... ../misc_shape_detect"
+	@echo "... ../misc_shape_detect_video"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/houghcircle.o"
@@ -188,6 +226,9 @@ help:
 	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect.o"
 	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect.i"
 	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect.s"
+	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.o"
+	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.i"
+	@echo "... home/shubh/opencv/traffic_sign_detection/Shape_detection/misc_shape_detect_video.s"
 .PHONY : help
 
 

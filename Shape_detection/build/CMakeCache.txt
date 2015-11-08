@@ -116,7 +116,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=misc_shape_detect
+CMAKE_PROJECT_NAME:STATIC=misc_shape_detect_video
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -198,6 +198,12 @@ misc_shape_detect_BINARY_DIR:STATIC=/home/shubh/opencv/traffic_sign_detection/Sh
 
 //Value Computed by CMake
 misc_shape_detect_SOURCE_DIR:STATIC=/home/shubh/opencv/traffic_sign_detection/Shape_detection/build
+
+//Value Computed by CMake
+misc_shape_detect_video_BINARY_DIR:STATIC=/home/shubh/opencv/traffic_sign_detection/Shape_detection/build
+
+//Value Computed by CMake
+misc_shape_detect_video_SOURCE_DIR:STATIC=/home/shubh/opencv/traffic_sign_detection/Shape_detection/build
 
 
 ########################

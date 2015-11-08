@@ -48,14 +48,11 @@ cv::Mat main_detector(cv::Mat& src , int lcanny , int ucanny)
 	        cv::approxPolyDP(cv::Mat(contours[i]), approx, cv::arcLength(cv::Mat(contours[i]), true)*0.02, true);
 
 		// Skip small or non-convex objects 
-		if (std::fabs(cv::contourArea(contours[i])) < 100 || !cv::isContourConvex(approx))
+		if (std::fabs(cv::contourArea(contours[i])) < 30 || !cv::isContourConvex(approx))
 			continue;
 
-		if (approx.size() == 3)
-		{
-			setLabel(dst, "TRI", contours[i]);    // Triangles
-		}
-		else if (approx.size() >= 4 && approx.size() <= 6)
+		
+		else if (approx.size() >= 3 && approx.size() <= 6)
 		{
 			// Number of vertices of polygonal curve
 			int vtc = approx.size();
@@ -75,22 +72,39 @@ cv::Mat main_detector(cv::Mat& src , int lcanny , int ucanny)
 			// Use the degrees obtained above and the number of vertices
 			// to determine the shape of the contour
 			if (vtc == 4 && mincos >= -0.1 && maxcos <= 0.3)
-				setLabel(dst, "RECT", contours[i]);
+				{
+                                 //setLabel(dst, "RECT", contours[i]);
+                                 cv::polylines( dst , approx , true , cv::Scalar(0,255,0) , 3 , CV_AA , 0 );
+                                }
+                        else if (vtc == 3 && mincos >= 0.25 && maxcos <= 0.750)
+                                {
+                                 //setLabel(dst, "TRI", contours[i]);
+                                 cv::polylines( dst , approx , true , cv::Scalar(0,255,0) , 3 , CV_AA , 0 );
+                                }
 			else if (vtc == 5 && mincos >= -0.34 && maxcos <= -0.27)
-				setLabel(dst, "PENTA", contours[i]);
+                                {
+				//setLabel(dst, "PENTA", contours[i]);
+                                cv::polylines( dst , approx , true , cv::Scalar(0,255,0) , 3 , CV_AA , 0 );
+                                }
 			else if (vtc == 6 && mincos >= -0.55 && maxcos <= -0.45)
-				setLabel(dst, "HEXA", contours[i]);
+				{
+                                 //setLabel(dst, "HEXA", contours[i]);
+                                 cv::polylines( dst , approx , true , cv::Scalar(0,255,0) , 3 , CV_AA , 0 );
+                                }
+                                 
 		}
 		else
 		{
-			// Detect and label circles
+			
 			double area = cv::contourArea(contours[i]);
 			cv::Rect r = cv::boundingRect(contours[i]);
 			int radius = r.width / 2;
+                        
 
 			if (std::abs(1 - ((double)r.width / r.height)) <= 0.2 &&
 			    std::abs(1 - (area / (CV_PI * std::pow(radius, 2)))) <= 0.2)
-				setLabel(dst, "CIR", contours[i]);
+				//setLabel(dst, "CIR", contours[i]);
+                                cv::polylines( dst , approx , true , cv::Scalar(0,255,0) , 3 , CV_AA , 0 );
 		}
 	}
 
